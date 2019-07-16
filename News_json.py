@@ -15,7 +15,7 @@ def ten_popular_words():
 
         for word in sum(descriptions, []):
             if len(word) > 6:
-                format_description.append(word)
+                format_description.append(word.lower())
 
         Counter = Counter(format_description)
         words = Counter.most_common(10)
@@ -23,3 +23,4 @@ def ten_popular_words():
             print(f'Слово: "{word[0]}" встречается: {word[1]} раз')
 
 ten_popular_words()
+
